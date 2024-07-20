@@ -17,7 +17,7 @@ export default function Home() {
       />
 
       <div className="w-1/2 flex flex-col h-full">
-        <FileEditor file={file ?? ""} />
+        <FileEditor file={file ?? ""} setFile={setFile} />
       </div>
     </main>
   );
