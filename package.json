@@ -29,5 +29,6 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.5.3",
     "yaml": "^2.4.5"
-  }
+  },
+  "packageManager": "bun@1.1.20"
 }

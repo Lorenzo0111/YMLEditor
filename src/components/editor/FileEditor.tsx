@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { parse, stringify } from "yaml";
-import { Button } from "../ui/button";
-import { KeyEditor } from "./KeyEditor";
-import { ValueEditor } from "./ValueEditor";
+import { ObjectEditor } from "./ValueEditor";
 
 export function FileEditor({
   file,
@@ -32,40 +30,15 @@ export function FileEditor({
 
   useEffect(() => {
     if (data) {
-      setFile(stringify(data));
+      const string = stringify(data);
+      if (string === file) return;
+
+      setFile(string);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, setFile]);
 
   if (error) return <p className="text-red-500">{error}</p>;
 
-  return (
-    <div className="flex flex-col gap-3">
-      {Object.entries(data ?? {}).map(([key, value]) => (
-        <div key={key} className="flex items-center gap-2">
-          <KeyEditor
-            value={key}
-            setValue={(newKey) => {
-              const newData = { ...data };
-              delete newData[key];
-              newData[newKey] = value;
-              setData(newData);
-            }}
-          />
-
-          <ValueEditor
-            value={value}
-            setValue={(newData) => {
-              setData((prevData: any) => ({ ...prevData, [key]: newData }));
-            }}
-          />
-        </div>
-      ))}
-      <Button
-        variant="outline"
-        onClick={() => setData({ ...data, [Object.keys(data).length]: "" })}
-      >
-        Add Field
-      </Button>
-    </div>
-  );
+  return <ObjectEditor value={data} setValue={setData} />;
 }
