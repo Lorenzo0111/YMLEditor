@@ -1,34 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YMLEditor
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+[![GitHub Release](https://img.shields.io/github/v/release/Lorenzo0111/YMLEditor)](https://github.com/Lorenzo0111/YMLEditor/releases/latest)
+[![GitHub License](https://img.shields.io/github/license/Lorenzo0111/YMLEditor)](LICENSE)
+[![Discord](https://img.shields.io/discord/1088775598337433662)](https://discord.gg/HT47UQXBqG)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+  <hr />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLorenzo0111%2FBank&project-name=ymleditor&repository-name=YMLEditor"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## What is YMLEditor
 
-## Learn More
+YMLEditor is a web interface that allows you to edit your YML configuration files from a simple interface
 
-To learn more about Next.js, take a look at the following resources:
+<img src="https://github.com/Lorenzo0111/YMLEditor/blob/main/media/Dashboard.png?raw=true" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploying
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Serverless
 
-## Deploy on Vercel
+You can deploy the project to Vercel or any other hosting service by clicking the buttons above.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Selfhosting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you want to selfhost, you can run `bun install`, `bun run build` and `bun run start` to start the program.
+
+The dashboard will usually be available [here](http://localhost:3000/).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+If you need help, feel free to join the [Discord Server](https://discord.gg/HT47UQXBqG) or open an issue.
